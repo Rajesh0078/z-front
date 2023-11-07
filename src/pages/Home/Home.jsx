@@ -11,7 +11,7 @@ const Home = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.get("http://localhost:8080/api/meal").then((res) => setMealData(res.data))
+        axios.get("https://backend-zom.onrender.com/api/meal").then((res) => setMealData(res.data))
         setFormData({
             location: "",
             cuisine: "",

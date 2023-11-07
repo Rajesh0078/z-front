@@ -13,8 +13,8 @@ const MealType = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.post("http://localhost:8080/api/filter", { lcost: formData.lcost, location: formData.location, hcost: formData.hcost, cuisine: formData.cuisine, mealtype: mealName, sort: formData.sort, page: formData.page }).then((res) => setFilteredData(res.data.result))
-        axios.post("http://localhost:8080/api/filter", { lcost: formData.lcost, location: formData.location, hcost: formData.hcost, cuisine: formData.cuisine, mealtype: mealName, sort: formData.sort, page: formData.page }).then((res) => setFilteredFullData(res.data.full))
+        axios.post("https://backend-zom.onrender.com/api/filter", { lcost: formData.lcost, location: formData.location, hcost: formData.hcost, cuisine: formData.cuisine, mealtype: mealName, sort: formData.sort, page: formData.page }).then((res) => setFilteredData(res.data.result))
+        axios.post("https://backend-zom.onrender.com/api/filter", { lcost: formData.lcost, location: formData.location, hcost: formData.hcost, cuisine: formData.cuisine, mealtype: mealName, sort: formData.sort, page: formData.page }).then((res) => setFilteredFullData(res.data.full))
     }, [formData, mealName])
 
     if (filteredFullData.length) {

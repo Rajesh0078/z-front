@@ -13,7 +13,7 @@ const ResDetails = () => {
     const { navId } = useContext(store)
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/restaurant/${navId}`).then((result) => setResData(result.data))
+        axios.get(`https://backend-zom.onrender.com/api/restaurant/${navId}`).then((result) => setResData(result.data))
     }, [navId])
 
     return (
