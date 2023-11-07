@@ -39,9 +39,7 @@ const Filters = () => {
 
     return (
         <>
-            <form className='p-2'>
-                <h4 style={{ color: "#192F60" }} className='mb-3'>Filters/Sort</h4>
-                <div style={{ color: "#192F60" }} className='mb-2'>Select Location</div>
+            <form className='collapse mt-4 bg-white px-3 res-collapse' id='collapseExample'>
                 <select name="location" id="location" className='w-100 mb-3' onChange={locationHnadler}>
                     <option value="">select</option>
                     <option value="Delhi">Delhi</option>
@@ -107,7 +105,7 @@ const Filters = () => {
                         <label htmlFor="htol" className='ms-2'>Price high to low</label>
                     </div>
                 </div>
-            </form>
+            </form >
         </>
     )
 }

@@ -21,17 +21,17 @@ const ResDetails = () => {
             <Navbar />
             {
                 resData &&
-                <div className='py-5 ' style={{ height: "50rem", padding: "0 5rem" }}>
-                    <img src={resData.thumb} alt="hh" className='h-[25rem] w-100' style={{ height: "25rem", objectFit: "cover" }} />
-                    <h4 className=' fs-2  mt-4' style={{ color: "#192F60" }}>{resData.name}</h4>
-                    <div className='mt-2 py-2 d-flex justify-content-between'>
+                <div className='py-5 res_contnent' style={{ height: "50rem", padding: "0 5rem" }}>
+                    <img src={resData.thumb} alt="hh" className='h-[25rem] w-100 res_image' style={{ height: "25rem", objectFit: "cover" }} />
+                    <h4 className=' fs-2 padd mt-4' style={{ color: "#192F60" }}>{resData.name}</h4>
+                    <div className='mt-2 py-2 padd d-flex justify-content-between'>
                         <div style={{ color: "#192F60" }}>
                             <span className={` fs-5 px-4 border-bottom ${isOverViewClicked ? "border-danger" : ""} py-2 me-3 cursor-pointer`} onClick={() => { setIsContactClicked(false); setIsOverViewClicked(true) }} role='button'>Overview</span>
                             <span className={` fs-5 px-4 border-bottom py-2 me-3 cursor-pointer ${isContactClicked ? "border-danger" : ""}`} onClick={() => { setIsOverViewClicked(false); setIsContactClicked(true) }} role='button'>Contact</span>
                         </div>
-                        <p className=' py-2 px-4 d-inline text-white' style={{ marginTop: "-.5rem", background: "#CE0505" }} data-bs-toggle="modal" data-bs-target="#cartProductModal">Place Online Order</p>
+                        <p className=' py-2 px-4 d-inline text-white' style={{ marginTop: "-.5rem", background: "#CE0505" }} data-bs-toggle="modal" data-bs-target="#cartProductModal" role='button'>Place Online Order</p>
                     </div>
-                    <div className='mb-3'>
+                    <div className='mb-3 padd'>
                         {
                             isOverViewClicked &&
                             <>
